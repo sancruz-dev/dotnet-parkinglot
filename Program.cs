@@ -9,43 +9,46 @@ Console.WriteLine("\nAgora digite o preço que será cobrado por hora:");
 decimal pricePerHour = Convert.ToDecimal(Console.ReadLine());
 
 
-// Estacionamento es = new Estacionamento(initialPrice, pricePerHour);
+Estacionamento es = new Estacionamento(initialPrice, pricePerHour);
 
 bool showingMenu = true;
 
 while (showingMenu)
 {
   Console.Clear();
-  Console.WriteLine("Digite um número correspondente ao que deseja fazer:");
 
-  if (showingMenu)
+  Console.WriteLine("Digite um número que corresponde sua opção:");
+  Console.WriteLine("1 - Cadastrar veículo");
+  Console.WriteLine("2 - Remover veículo");
+  Console.WriteLine("3 - Listar veículos");
+  Console.WriteLine("4 - Encerrar");
+
+  switch (Console.ReadLine())
   {
-    switch (Console.ReadLine())
-    {
-      case "1":
+    case "1":
+      es.AddVeiculo();
+      break;
 
-        break;
-      case "2":
+    case "2":
+      es.RemoveVeiculo();
+      break;
 
-        break;
-      case "3":
+    case "3":
+      es.ListaVeiculosRegistrados();
+      break;
 
-        break;
-      case "4":
-        showingMenu = false;
-        break;
+    case "4":
+      showingMenu = false;
+      break;
 
-      default:
-        Console.WriteLine("Número de menu inválido.");
-        break;
-    }
-
-    Console.ReadLine();
+    default:
+      Console.WriteLine("Número de menu inválido.");
+      break;
   }
-  else
-  {
-    Console.WriteLine("Sistema encerrado. Até mais :)");
-  }
+
+  Console.WriteLine("\nPressione uma tecla para continuar");
+  Console.ReadLine();
+  Console.WriteLine("Sistema encerrado. Até mais :)\n");
 }
 
 
