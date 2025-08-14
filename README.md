@@ -1,5 +1,8 @@
 # .NET Fundamentals
 
+[![.NET](https://img.shields.io/badge/.NET-9.0-blue.svg)](https://dotnet.microsoft.com/)
+
+
 ## Context
 You have been hired to build a system for a parking lot, which will be used to manage parked vehicles and perform your operations, such as adding a vehicle, removing a vehicle (and displaying the amount charged during the period) and listing vehicles.
 
